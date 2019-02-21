@@ -2,7 +2,6 @@
 
 // Autoloader
 spl_autoload_register(function ($class) {
-    echo "$class<br>";
     $root = dirname(__DIR__); // get the parent directory
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
     
