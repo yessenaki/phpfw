@@ -8,4 +8,5 @@ class Config
     const DB_NAME = 'phpfw';
     const DB_USER = 'root';
     const DB_PASSWORD = '';
+    const SHOW_ERRORS = false;
 }
