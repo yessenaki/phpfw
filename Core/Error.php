@@ -24,7 +24,7 @@ class Error
 
         http_response_code($code);
 
-        if (\App\Config::SHOW_ERRORS) {
+        if (Config::SHOW_ERRORS) {
             echo "<h1>Fatal error</h1>";
             echo "<p>Uncaught exception: \"" . get_class($exception) . "\"</p>";
             echo "<p>Message: \"" . $exception->getMessage() . "\"</p>";
@@ -39,11 +39,7 @@ class Error
             $message .= "\nThrown in \"" . $exception->getFile() . "\" on line " . $exception->getLine();
             error_log($message);
 
-            if ($code == 404) {
-                echo "<h1>Page not found 404</h1>"
-            }
-            
-            echo "<h1>An error occurred</h1>";
+            View::renderTemplate("errors/$code.html");
         }
     }
 }
