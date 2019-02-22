@@ -2,7 +2,9 @@
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-// Autoloader
+/**
+ * Autoloader
+ */
 spl_autoload_register(function ($class) {
     $root = dirname(__DIR__); // get the parent directory
     $file = $root . '/' . str_replace('\\', '/', $class) . '.php';
@@ -12,6 +14,15 @@ spl_autoload_register(function ($class) {
     }
 });
 
+/**
+ * Error and Exception handling
+ */
+set_error_handler('Core\Error::errorHandler');
+set_exception_handler('Core\Error::exceptionHandler');
+
+/**
+ * Routing
+ */
 $router = new Core\Router();
 
 // Add the routes
