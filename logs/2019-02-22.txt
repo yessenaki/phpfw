@@ -82,3 +82,17 @@ Stack trace: #0 D:\OSPanel\domains\phpfw.loc\Core\Controller.php(21): Core\Contr
 #2 D:\OSPanel\domains\phpfw.loc\public\index.php(35): Core\Router->dispatch('posts/add-new')
 #3 {main}
 Thrown in "D:\OSPanel\domains\phpfw.loc\Core\Controller.php" on line 24
+[22-Feb-2019 14:42:11 Europe/Moscow] Uncaught exception: "Exception" with message "No route matched"
+Stack trace: #0 D:\OSPanel\domains\phpfw.loc\public\index.php(35): Core\Router->dispatch('adfsd')
+#1 {main}
+Thrown in "D:\OSPanel\domains\phpfw.loc\Core\Router.php" on line 78
+[22-Feb-2019 14:42:18 Europe/Moscow] Uncaught exception: "Exception" with message "No route matched"
+Stack trace: #0 D:\OSPanel\domains\phpfw.loc\public\index.php(35): Core\Router->dispatch('posts')
+#1 {main}
+Thrown in "D:\OSPanel\domains\phpfw.loc\Core\Router.php" on line 78
+[22-Feb-2019 14:42:32 Europe/Moscow] Uncaught exception: "Exception" with message "Method afterAction not found in controller App\Controllers\Posts"
+Stack trace: #0 D:\OSPanel\domains\phpfw.loc\Core\Controller.php(21): Core\Controller->__call('after', Array)
+#1 D:\OSPanel\domains\phpfw.loc\Core\Router.php(70): Core\Controller->__call('index', Array)
+#2 D:\OSPanel\domains\phpfw.loc\public\index.php(35): Core\Router->dispatch('posts/index')
+#3 {main}
+Thrown in "D:\OSPanel\domains\phpfw.loc\Core\Controller.php" on line 24
