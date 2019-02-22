@@ -2,9 +2,10 @@
 
 namespace App\Controllers;
 
-use \Core\View;
+use Core\Controller;
+use Core\View;
 
-class Home extends \Core\Controller
+class Home extends Controller
 {
     protected function before()
     {
@@ -25,7 +26,7 @@ class Home extends \Core\Controller
             'colours' => ['red', 'green', 'blue']
         ]);
          */
-        View::renderTemplate('Home/index.html', [
+        View::renderTemplate('home/index.html', [
             'name' => 'Dave',
             'colours' => ['red', 'green', 'blue']
         ]);
