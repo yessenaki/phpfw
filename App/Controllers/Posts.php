@@ -4,13 +4,15 @@ namespace App\Controllers;
 
 use Core\Controller;
 use Core\View;
+use App\Models\Post;
 
 class Posts extends Controller
 {
     public function indexAction()
     {
-        // echo 'Hello from the index action in the Posts controller!';
-        View::renderTemplate('posts/index.html');
+        $posts = Post::getAll();
+
+        View::renderTemplate('posts/index.html', ['posts' => $posts]);
     }
 
     public function addNewAction()
